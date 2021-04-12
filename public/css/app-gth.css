@@ -1,0 +1,13 @@
+.btn-gth-blue {
+    background-color: #13356d;
+    color: #7bffb6;
+}
+
+.shadow-card-1:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+        1px 0px 50px -11px rgba(123, 255, 182, 0);
+    box-shadow: 0px 10px 13px -7px #000000,
+        1px 0px 50px -11px rgba(123, 255, 182, 0);
+}
+.shadow-card-2 {
+}
