@@ -35,7 +35,7 @@
     <div id="app">
         @include('components.header')
 
-        <main class="py-4">
+        <main class="py-4 animate__animated animate__fadeInLeft">
             @yield('content')
         </main>
         @include('components.footer')
