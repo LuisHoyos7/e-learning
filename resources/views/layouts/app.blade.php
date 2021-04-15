@@ -27,8 +27,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('style')
     <link href="{{ asset('css/app-gth.css') }}" rel="stylesheet">
-
 </head>
 
 <body>
@@ -40,6 +40,7 @@
         </main>
         @include('components.footer')
     </div>
+    @yield('scripts')
 </body>
 
 </html>
