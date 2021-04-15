@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed top-0 right-0 px-6 py-4 sm:block">
+{{-- fixed top-0 right-0 px-6 py-4 sm:block --}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ asset('logo/gth.png') }}" class="logo-gth " alt="">
