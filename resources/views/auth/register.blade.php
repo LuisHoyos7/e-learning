@@ -123,7 +123,7 @@
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
                                 <input id="name" type="text" class=" @error('name') is-invalid @enderror" name="name"
-                                    value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    value="{{ old('name') }}" placeholder="Nombre" required autocomplete="name" autofocus>
                                 {{-- <input type="text" placeholder="Username" /> --}}
                             </div>
                             @error('name')
@@ -134,7 +134,8 @@
                             <div class="input-field">
                                 <i class="fas fa-envelope"></i>
                                 <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email">
+                                    value="{{ old('email') }}" placeholder="email@dominion.com" required
+                                    autocomplete="email">
 
                                 {{-- <input type="email" placeholder="Email" /> --}}
                             </div>
@@ -146,7 +147,7 @@
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
                                 <input id="password" type="password" class="@error('password') is-invalid @enderror"
-                                    name="password" required autocomplete="new-password">
+                                    name="password" placeholder="********" required autocomplete="new-password">
                                 {{-- <input type="password" placeholder="Password" /> --}}
                             </div>
                             @error('password')
@@ -156,11 +157,11 @@
                             @enderror
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <div class="col-md-6">
-                                    <input id="password-confirm" type="password" name="password_confirmation" required
-                                        autocomplete="new-password">
-                                </div>
+
+                                <input id="password-confirm" type="password" name="password_confirmation"
+                                    placeholder="********" required autocomplete="new-password">
                             </div>
+
                             <button type="submit" class="btn-login">
                                 {{ __('Register') }}
                             </button>
@@ -195,7 +196,8 @@
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
                                 <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    value="{{ old('email') }}" placeholder="email@dominion.com" required
+                                    autocomplete="email" autofocus>
                                 {{-- <input type="text" placeholder="Username" /> --}}
                             </div>
                             @error('email')
@@ -206,7 +208,7 @@
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
                                 <input id="password" type="password" class=" @error('password') is-invalid @enderror"
-                                    name="password" required autocomplete="current-password">
+                                    name="password" required autocomplete="current-password" placeholder="*********">
                             </div>
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
