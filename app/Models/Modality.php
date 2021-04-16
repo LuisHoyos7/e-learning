@@ -11,5 +11,6 @@ class Modality extends Model
 
     protected $fillable = [
         'name',
+        'description',
     ];
 }

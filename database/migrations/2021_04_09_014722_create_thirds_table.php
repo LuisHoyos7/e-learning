@@ -16,6 +16,10 @@ class CreateThirdsTable extends Migration
         Schema::create('thirds', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('mobile');
+            $table->string('address');
+            $table->string('identification');
+            $table->string('profession');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });

@@ -22,7 +22,9 @@ class TopicFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'description' => $this->faker->text,
+            'unit_id' => \App\Models\Unit::all()->random()->id,
         ];
     }
 }

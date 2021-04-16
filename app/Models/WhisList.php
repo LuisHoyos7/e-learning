@@ -11,5 +11,6 @@ class WhisList extends Model
 
     protected $fillable = [
         'name',
+        'description',
     ];
 }

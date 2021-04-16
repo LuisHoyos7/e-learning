@@ -23,6 +23,7 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'description' => $this->faker->text,
             'group_id' => \App\Models\Group::all()->random()->id,
         ];
     }

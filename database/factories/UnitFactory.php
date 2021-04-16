@@ -22,7 +22,9 @@ class UnitFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'description' => $this->faker->text,
+            'course_id' => \App\Models\Course::all()->random()->id,
         ];
     }
 }
