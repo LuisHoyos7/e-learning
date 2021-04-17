@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
 
-
+{{dd($course)}}:
 
         <div class="row">
             <x-commons.slider />

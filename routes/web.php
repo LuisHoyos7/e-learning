@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
+
+
 Route::get('/login/v2', function () {
     return view('auth.loginv2');
 });
 
 Auth::routes();
 
+Route::middleware(['auth'])->group(function(){
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+});
