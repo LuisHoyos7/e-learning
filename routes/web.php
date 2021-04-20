@@ -16,11 +16,13 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
 
 
-Route::get('/login/v2', function () {
-    return view('auth.loginv2');
-});
+// Route::get('/login/v2', function () {
+//     return view('auth.loginv2');
+// });
 
 Auth::routes();
+
+Route::get('/course/show/{course}', [App\Http\Controllers\CourseController::class, 'show'])->name('show.course');
 
 Route::middleware(['auth'])->group(function(){
 

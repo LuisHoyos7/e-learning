@@ -8,7 +8,19 @@ class Card extends Component
 {
     public $course;
 
+<<<<<<< HEAD
     public function __construct($course)
+=======
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+
+
+    public function __construct($course = [])
+
+>>>>>>> cfd0471cc4114c3f173f96b0889a8788da69d4c0
     {
         $this->course = $course;
     }
