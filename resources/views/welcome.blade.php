@@ -2,16 +2,13 @@
 @section('content')
     <div class="container-fluid">
 
-
-{{dd($course)}}:
-
         <div class="row">
             <x-commons.slider />
-            @for ($i = 0; $i < 10; $i++)
+            @foreach($course as $course)
                 <div class="col-sm-12 col-md-4 col-lg-3">
-                    <x-commons.card />
+                    <x-commons.card :course=$course />
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>
 @endsection
