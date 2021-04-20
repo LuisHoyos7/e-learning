@@ -7,7 +7,7 @@
         <span>
             Duracion: {{ $course->duration }}
         </span>
-        <p class="card-text text-justify text-wrap text-truncate" style="height: 6rem; border:1px solid">
+        <p class="card-text text-justify text-wrap text-truncate" style="height: 6rem;">
             {{ $course->description }}</p>
         <a href="{{ route('show.course', $course->id) }}" class="btn btn-gth-blue ">comprar</a>
     </div>
