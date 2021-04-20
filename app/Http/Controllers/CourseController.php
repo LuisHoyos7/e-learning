@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace App\Http\Controllers;
 
 use App\Models\Course;
@@ -9,7 +9,7 @@ class CourseController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -50,7 +50,9 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+
+        $course = Course::find($course->id);
+        return view('course.show', compact('course'));
     }
 
     /**
