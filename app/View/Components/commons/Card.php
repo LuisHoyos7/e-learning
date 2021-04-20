@@ -6,13 +6,18 @@ use Illuminate\View\Component;
 
 class Card extends Component
 {
+
     public $course;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($course)
+
+
+    public function __construct($course = [])
+
     {
         $this->course = $course;
     }

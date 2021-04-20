@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="container-fluid">
+
         <div class="row">
             <x-commons.slider />
             @foreach ($course as $c)
