@@ -52,6 +52,7 @@ class CourseController extends Controller
     {
 
         $course = Course::find($course->id);
+
         return view('course.show', compact('course'));
     }
 
