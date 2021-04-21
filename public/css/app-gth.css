@@ -27,13 +27,13 @@ body {
     /* animation-duration: 2s;  */
 }
 .neo-panel-undo {
-    border-radius: 50px;
+    border-radius: 15px;
     background: #ebf1f4;
     box-shadow: inset 14px 14px 28px #c8cdcf, inset -14px -14px 28px #ffffff;
     border: 1px solid #ccc;
 }
 .neo-panel {
-    border-radius: 24px;
+    border-radius: 15px;
     background: linear-gradient(225deg, #fbffff, #d4d9dc);
     box-shadow: -13px 13px 26px #c5cacd, 13px -13px 26px #ffffff;
     border: 1px solid #ccc;
@@ -62,4 +62,5 @@ a.link-show-course :active {
 
 .header-course {
     padding: 20px;
+    background: #f7f7f7;
 }

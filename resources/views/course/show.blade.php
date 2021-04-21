@@ -39,6 +39,13 @@
         <div class="row mt-5 block-center">
             <div class="col"></div>
             <div class="col-sm-10 col-md-10 col-lg-10 ">
+                <h5>Lo que aprenderas</h5>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-5 block-center">
+            <div class="col"></div>
+            <div class="col-sm-10 col-md-10 col-lg-10 ">
                 <section>
                     <article>
                         <h1>Contenido de curso</h1>
