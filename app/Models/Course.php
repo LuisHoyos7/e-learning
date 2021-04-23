@@ -15,4 +15,10 @@ class Course extends Model
         'duration',
         'coupon',
     ];
+
+    public function units()
+    {
+        return $this->hasMany(Unit::class);
+    }
 }
+

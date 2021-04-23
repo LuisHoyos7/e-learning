@@ -22,7 +22,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('
 
 Auth::routes();
 
-Route::get('/course/show/{course}', [App\Http\Controllers\CourseController::class, 'show'])->name('show.course');
+//Route::get('/course/show/{course}', [App\Http\Controllers\CourseController::class, 'show'])->name('show.course');
+
+Route::resource('course', App\Http\Controllers\CourseController::class);
 
 Route::middleware(['auth'])->group(function(){
 
