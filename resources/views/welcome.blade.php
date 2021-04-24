@@ -10,5 +10,7 @@
 
             @endforeach
         </div>
-    </div>
+    </div> 
+
+    <!--<course-component></course-component>-->
 @endsection
