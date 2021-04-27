@@ -29,10 +29,21 @@
                     </ul>
                 </li>
                 @if (Route::has('login'))
-
                     @auth
                         <li class="nav-item">
                             <a href="{{ url('/home') }}" class="nav-link active" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('logout') }}" class="nav-link"  
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();"
+                                target="_blank">
+                                Salir
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </li>
                     @else
                         <li class="nav-item">
@@ -45,18 +56,15 @@
                         @endif
                     @endauth
                 @endif
-
             </ul>
 
-
-            <div class="d-flex mr-auto justify-content-end">
-
-            </div>
+            <div class="d-flex mr-auto justify-content-end"> </div>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
                 <button class="btn  btn-gth-blue my-2 my-sm-0" type="submit">Search</button>
             </form>
 
         </div>
+
     </div>
 </nav>

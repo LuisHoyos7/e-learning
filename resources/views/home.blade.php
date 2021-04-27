@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.metronic.index')
 
 @section('content')
 <div class="container">
