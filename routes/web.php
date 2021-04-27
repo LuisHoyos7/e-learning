@@ -18,6 +18,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('
 Auth::routes();
 
 Route::resource('course', App\Http\Controllers\CourseController::class);   
+Route::resource('group', App\Http\Controllers\GroupController::class);   
 
 Route::middleware(['auth'])->group(function(){
 

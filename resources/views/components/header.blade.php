@@ -34,10 +34,8 @@
                             <a href="{{ url('/home') }}" class="nav-link active" aria-current="page">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('logout') }}" class="nav-link"  
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();"
-                                target="_blank">
+                            <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();" target="_blank">
                                 Salir
                             </a>
 

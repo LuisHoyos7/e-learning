@@ -2,11 +2,11 @@
 
 @section('content')
 
-@component('components.Home.banner')
+    @component('components.Home.banner')
 
-@endcomponent
+    @endcomponent
 
-@component('components.Home.nombredelasection')
+    @component('components.Home.nombredelasection')
 
-@endcomponent
+    @endcomponent
 @endsection

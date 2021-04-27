@@ -42,33 +42,32 @@
         <div class="row mt-4 block-center">
             <div class="col-sm-12 col-md-12 col-lg-12 ">
                 <h1>Contenido de curso</h1>
+                @php
+                    $countUnit = 0;
+                @endphp
+                @foreach ($units as $unit)
                     @php
-                        $countUnit = 0; 
+                        $countUnit = $countUnit + 1;
                     @endphp
-                    @foreach($units as $unit)
-                    @php 
-                        $countUnit = $countUnit+1;
-                    @endphp
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left" type="button"
-                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
-                                            #{{$countUnit}} {{$unit->name}}
-                                        </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                        Traer con ajax
-                                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        #{{ $countUnit }} {{ $unit->name }}
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Traer con ajax
                                 </div>
                             </div>
                         </div>
-                    @endforeach 
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
