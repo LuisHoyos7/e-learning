@@ -26,7 +26,7 @@ class GroupController extends Controller
      */
     public function create()
     {
-        //
+        return view('groups.create');
     }
 
     /**
@@ -37,7 +37,11 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        Group::create($input);
+
+        return redirect()->route('group.index');
     }
 
     /**
@@ -57,9 +61,9 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Group $group)
     {
-        //
+        return view('groups.edit', compact('group'));
     }
 
     /**
@@ -69,9 +73,12 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Group $group)
     {
-        //
+       
+        $group->update($request->all());
+
+        return redirect()->route('group.index');
     }
 
     /**
@@ -80,8 +87,12 @@ class GroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Group $group)
     {
-        //
+        $group->delete();
+
+        return response()->json([
+            'message' => 'Grupo Eliminado'
+          ]); 
     }
 }

@@ -8,6 +8,7 @@
     <title>E-learning</title>
     <meta name="description" content="Updates and statistics" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -21,14 +22,17 @@
     <link href="{{ asset('metronic/assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.4') }}" rel="stylesheet"
         type="text/css" />
     <link href="{{ asset('metronic/assets/css/style.bundle.css?v=7.0.4') }}" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" style="background-image: url(metronic/assets/media/bg/bg-10.jpg)"
+<body id="kt_body" style="background-image: url({{ asset('metronic/assets/media/bg/bg-10.jpg') }}"
     class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 
     @include('layouts.metronic.header_mobile')
@@ -187,7 +191,7 @@
     <!--end::Global Config-->
     <!--begin::Global Theme Bundle(used by all pages)-->
     <script src="{{ asset('metronic/assets/plugins/global/plugins.bundle.js?v=7.0.4') }}"></script>
-    <script src="{{ asset('metronic/assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.4') }}"></script>
+    {{-- <script src="{{ asset('metronic/assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.4') }}"></script> --}}
     <script src="{{ asset('metronic/assets/js/scripts.bundle.js?v=7.0.4') }}"></script>
     <!--end::Global Theme Bundle-->
     <!--begin::Page Vendors(used by this page)-->
@@ -195,6 +199,7 @@
     <!--end::Page Vendors-->
     <!--begin::Page Scripts(used by this page)-->
     <script src="{{ asset('metronic/assets/js/pages/widgets.js?v=7.0.4') }}"></script>
+
     <!--end::Page Scripts-->
 </body>
 <!--end::Body-->
