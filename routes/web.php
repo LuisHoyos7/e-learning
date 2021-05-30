@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\GroupController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +18,18 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
-
 Auth::routes();
 
-Route::resource('course', App\Http\Controllers\CourseController::class);   
-Route::resource('group', App\Http\Controllers\GroupController::class);   
+Route::resource('course', App\Http\Controllers\CourseController::class);
 
 Route::middleware(['auth'])->group(function(){
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+  Route::resource('group', GroupController::class);
+  Route::resource('user', UserController::class);
 });
+
+Route::group(["prefix" => "/", "middleware" => ['auth']], function() {
+  Route::get('{any}', function () {
+    return view('home');
+  })->where('any', '.*');
+});
+
