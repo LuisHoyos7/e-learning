@@ -62,7 +62,9 @@
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#accordionExample">
                                 <div class="card-body">
-                                    Traer con ajax
+                                    @foreach ($unit->topics as $topic)
+                                        {{ $topic->name }}
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
