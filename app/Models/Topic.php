@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Unit;
 class Topic extends Model
 {
     use HasFactory;
@@ -13,4 +13,10 @@ class Topic extends Model
         'name',
         'description',
     ];
+
+    public function unit()
+    {
+       return $this->belongsTo(Unit::class);
+    }
+
 }
