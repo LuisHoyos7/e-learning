@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Requests\StoreCourseRequest;
 use App\Models\Course;
+use App\Repository\CourseRepository;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -39,9 +41,10 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCourseRequest $request,CourseRepository $courseRepository)
     {
-        //
+        $pqrs = $courseRepository->create($request);
+        return response()->json(['pqrs'=>$pqrs],201);
     }
 
     /**

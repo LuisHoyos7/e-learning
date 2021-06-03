@@ -20,6 +20,7 @@ class CreateCoursesTable extends Migration
             $table->decimal('price');
             $table->string('coupon');
             $table->time('duration');
+            $table->string('slug');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('modality_id')->constrained();
             $table->timestamps();
