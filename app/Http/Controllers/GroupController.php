@@ -4,24 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Group;
+use App\Repositories\Group\GroupRepository;
 
 class GroupController extends Controller
 {
+    protected $groupReposity;
+
+    public function __construct(GroupRepository $groupRepository)
+    {
+        $this->groupRepository = $groupRepository;
+    }
    
     public function index()
     {
-        $groups = Group::all();
+        $groups = $this->groupRepository->getAll();
 
         return $groups;
     }
 
     public function store(Request $request)
     {
-        $data = $request->all();
-
-        $group = new Group($data);
-
-        $group->save();
+        $group = $this->groupRepository->create($request->all());
 
         return $group;
     }
@@ -33,14 +36,14 @@ class GroupController extends Controller
 
     public function update(Request $request, Group $group)
     {
-        $group->update($request->all());
+        $group = $this->groupRepository->update($group, $request->all(),);
 
         return $group;
     }
 
     public function destroy(Group $group)
     {
-        $group->delete();
+        $this->groupRepository->delete($group);
         return response()->json([
             'message' => 'Grupo Eliminado'
         ]);
