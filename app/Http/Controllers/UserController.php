@@ -13,6 +13,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    protected $groupReposity;
+
+    public function __construct(GroupRepository $groupRepository)
+    {
+        $this->groupRepository = $groupRepository;
+    }
+    
     public function index()
     {
         $user = Auth::user();

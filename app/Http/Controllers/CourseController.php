@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Requests\StoreCourseRequest;
 use App\Models\Course;
-use App\Repository\CourseRepository;
+use App\Repositories\Course\CourseRepository;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function __construct()
-    {
+    protected $courseRepository;
 
+    public function __construct(CourseRepository $courseRepository)
+    {
+        $this->courseRepository = $courseRepository;
     }
     /**
      * Display a listing of the resource.
@@ -41,10 +43,10 @@ class CourseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCourseRequest $request,CourseRepository $courseRepository)
+    public function store(StoreCourseRequest $request)
     {
-        $pqrs = $courseRepository->create($request);
-        return response()->json(['pqrs'=>$pqrs],201);
+        $course = $this->courseRepository->create($request->all());
+        return response()->json(['course'=>$course],201);
     }
 
     /**
