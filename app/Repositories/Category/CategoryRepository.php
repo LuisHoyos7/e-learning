@@ -1,11 +1,11 @@
 <?php 
 
-namespace App\Repositories\Group;
+namespace App\Repositories\Category;
 
 use App\Models\Category;
 use App\Repositories\BaseRepository;
 
-class GroupRepository extends BaseRepository
+class CategoryRepository extends BaseRepository
 {
     public function getModel(){
         return new Category();
