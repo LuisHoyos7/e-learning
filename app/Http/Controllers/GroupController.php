@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use App\Repositories\Group\GroupRepository;
 
 class GroupController extends Controller
 {
-    protected $groupReposity;
+    protected $groupRepository;
 
     public function __construct(GroupRepository $groupRepository)
     {
