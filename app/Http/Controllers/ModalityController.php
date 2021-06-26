@@ -28,7 +28,7 @@ class ModalityController extends Controller
         return $modality;
     }
 
-    public function show($category()
+    public function show($category)
     {
         return $category;
     }
