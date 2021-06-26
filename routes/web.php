@@ -9,6 +9,10 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\categoryController;
 use App\Http\Controllers\ModalityController;
+use App\Http\Controllers\ThirdController;
+use App\Http\Controllers\UnitController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +34,9 @@ Route::middleware(['auth'])->group(function(){
   Route::resource('user', UserController::class);
   Route::resource('category', CategoryController::class);
   Route::resource('modality', ModalityController::class);
+  Route::resource('third', ThirdController::class);
+  Route::resource('unit', UnitController::class);
+
 });
 
 Route::group(["prefix" => "/", "middleware" => ['auth']], function() {
