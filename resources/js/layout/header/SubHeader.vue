@@ -1,8 +1,6 @@
 <template>
   <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
-    <div
-      class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap"
-    >
+    <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
       <!--begin::Info-->
       <div class="d-flex align-items-center flex-wrap mr-1">
         <!--begin::Heading-->
@@ -18,8 +16,20 @@
             </BLink>
             <!--end::Item-->
             <!--begin::Item-->
-            <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
-            <BLink class="text-white text-hover-white opacity-75 hover-opacity-100"> Home </BLink>
+            <div v-for="route in $route.matched" :key="route.name">
+              <template v-if="route.meta.breadcrumb">
+                <span class="label label-dot label-sm bg-white opacity-75 mx-3"></span>
+                <BLink
+                  :to="{ name: route.name }"
+                  class="text-white text-hover-white opacity-75 hover-opacity-100"
+                  exact-path
+                  exact-active-class="active"
+                >
+                  {{ route.meta.breadcrumb }}
+                </BLink>
+              </template>
+            </div>
+            <!--end::Item-->
           </div>
           <!--end::Breadcrumb-->
         </div>
@@ -29,4 +39,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  created() {
+    console.log(this.$route.matched);
+  }
+};
+</script>
 

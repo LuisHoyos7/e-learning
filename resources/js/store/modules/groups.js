@@ -1,5 +1,3 @@
-import isEmpty from 'lodash/isEmpty';
-
 const groups = {
   namespaced: true,
   state: {
