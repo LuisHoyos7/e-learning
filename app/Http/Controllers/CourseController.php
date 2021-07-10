@@ -22,8 +22,7 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::all()->toArray();
-
+        $courses = $this->courseRepository->getAll();
         return $courses;
     }
 
@@ -57,9 +56,7 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-
         $units = $course->units;
-      
         return view('course.show', compact('course','units'));
     }
 

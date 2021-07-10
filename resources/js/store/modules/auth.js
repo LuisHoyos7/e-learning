@@ -6,6 +6,7 @@ const auth = {
   mutations: {
     SET_USER_DATA(state, payload) {
       state.authUser = payload;
+      state.authUser.firstLetterName = payload.name.charAt(0);
     }
   },
   actions: {

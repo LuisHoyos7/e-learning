@@ -7,21 +7,14 @@
         <!--begin::Header Logo-->
         <div class="header-logo">
           <BLink :to="{ name: 'Home' }">
-            <img
-              alt="Logo"
-              src="assets/media/logos/logo-letter-9.png"
-              class="logo-default max-h-40px"
-            />
+            <img alt="Logo" src="assets/media/logos/logo-letter-9.png" class="logo-default max-h-40px" />
           </BLink>
         </div>
         <!--end::Header Logo-->
         <!--begin::Header Menu Wrapper-->
         <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
           <!--begin::Header Menu-->
-          <div
-            id="kt_header_menu"
-            class="header-menu header-menu-left header-menu-mobile header-menu-layout-default"
-          >
+          <div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
             <!--begin::Header Navar-->
             <LayoutMenu />
             <!--end::Header Nav-->
@@ -106,138 +99,49 @@
           </div>
           <!--end::Toggle-->
           <!--begin::Dropdown-->
-          <div
-            class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-xl dropdown-menu-anim-up"
-          >
+          <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-xl dropdown-menu-anim-up">
             <form>
               <!--begin::Header-->
               <div
                 class="d-flex align-items-center py-10 px-8 bgi-size-cover bgi-no-repeat rounded-top"
-                style="background-image: url(assets/media/misc/bg-1.jpg)"
+                style="background-image: url(/metronic/assets/media/misc/bg-1.jpg)"
               >
                 <span class="btn btn-md btn-icon bg-white-o-15 mr-4">
                   <i class="flaticon2-shopping-cart-1 text-success"></i>
                 </span>
-                <h4 class="text-white m-0 flex-grow-1 mr-3">My Cart</h4>
+                <h4 class="text-white m-0 flex-grow-1 mr-3">Carrito</h4>
                 <button type="button" class="btn btn-success btn-sm">2 Items</button>
               </div>
               <!--end::Header-->
               <!--begin::Scroll-->
-              <div
-                class="scroll scroll-push"
-                data-scroll="true"
-                data-height="250"
-                data-mobile-height="200"
-              >
+              <div class="scroll scroll-push" data-scroll="true" data-height="250" data-mobile-height="200">
                 <!--begin::Item-->
-                <div class="d-flex align-items-center justify-content-between p-8">
-                  <div class="d-flex flex-column mr-2">
-                    <a
-                      href="#"
-                      class="font-weight-bold text-dark-75 font-size-lg text-hover-primary"
-                      >iBlender</a
-                    >
-                    <span class="text-muted">Best kichen gadget in 2020</span>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="font-weight-bold mr-1 text-dark-75 font-size-lg">$ 350</span>
-                      <span class="text-muted mr-1">for</span>
-                      <span class="font-weight-bold mr-2 text-dark-75 font-size-lg">5</span>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon mr-2">
-                        <i class="ki ki-minus icon-xs"></i>
+                <template v-for="course in courses">
+                  <div class="d-flex align-items-center justify-content-between p-8" :key="course.id">
+                    <div class="d-flex flex-column mr-2">
+                      <a href="#" class="font-weight-bold text-dark-75 font-size-lg text-hover-primary">
+                        {{ course.name }}
                       </a>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon">
-                        <i class="ki ki-plus icon-xs"></i>
-                      </a>
+                      <span class="text-muted">Michael Garcia</span>
+                      <div class="d-flex align-items-center mt-2">
+                        <span class="font-weight-bold mr-1 text-dark-75 font-size-lg">$ {{ course.price }}</span>
+                      </div>
                     </div>
+                    <a href="#" class="symbol symbol-70 flex-shrink-0">
+                      <img src="/img/vueJS.png" title="" alt="" />
+                    </a>
                   </div>
-                  <a href="#" class="symbol symbol-70 flex-shrink-0">
-                    <img src="assets/media/stock-600x400/img-1.jpg" title="" alt="" />
-                  </a>
-                </div>
+                </template>
                 <!--end::Item-->
                 <!--begin::Separator-->
                 <div class="separator separator-solid"></div>
                 <!--end::Separator-->
-                <!--begin::Item-->
-                <div class="d-flex align-items-center justify-content-between p-8">
-                  <div class="d-flex flex-column mr-2">
-                    <a
-                      href="#"
-                      class="font-weight-bold text-dark-75 font-size-lg text-hover-primary"
-                      >SmartCleaner</a
-                    >
-                    <span class="text-muted">Smart tool for cooking</span>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="font-weight-bold mr-1 text-dark-75 font-size-lg">$ 650</span>
-                      <span class="text-muted mr-1">for</span>
-                      <span class="font-weight-bold mr-2 text-dark-75 font-size-lg">4</span>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon mr-2">
-                        <i class="ki ki-minus icon-xs"></i>
-                      </a>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon">
-                        <i class="ki ki-plus icon-xs"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <a href="#" class="symbol symbol-70 flex-shrink-0">
-                    <img src="assets/media/stock-600x400/img-2.jpg" title="" alt="" />
-                  </a>
-                </div>
-                <!--end::Item-->
                 <!--begin::Separator-->
                 <div class="separator separator-solid"></div>
                 <!--end::Separator-->
-                <!--begin::Item-->
-                <div class="d-flex align-items-center justify-content-between p-8">
-                  <div class="d-flex flex-column mr-2">
-                    <a
-                      href="#"
-                      class="font-weight-bold text-dark-75 font-size-lg text-hover-primary"
-                      >CameraMax</a
-                    >
-                    <span class="text-muted">Professional camera for edge cutting shots</span>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="font-weight-bold mr-1 text-dark-75 font-size-lg">$ 150</span>
-                      <span class="text-muted mr-1">for</span>
-                      <span class="font-weight-bold mr-2 text-dark-75 font-size-lg">3</span>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon mr-2">
-                        <i class="ki ki-minus icon-xs"></i>
-                      </a>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon">
-                        <i class="ki ki-plus icon-xs"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <a href="#" class="symbol symbol-70 flex-shrink-0">
-                    <img src="assets/media/stock-600x400/img-3.jpg" title="" alt="" />
-                  </a>
-                </div>
-                <!--end::Item-->
                 <!--begin::Separator-->
                 <div class="separator separator-solid"></div>
                 <!--end::Separator-->
-                <!--begin::Item-->
-                <div class="d-flex align-items-center justify-content-between p-8">
-                  <div class="d-flex flex-column mr-2">
-                    <a href="#" class="font-weight-bold text-dark text-hover-primary">4DPrinter</a>
-                    <span class="text-muted">Manufactoring unique objects</span>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="font-weight-bold mr-1 text-dark-75 font-size-lg">$ 1450</span>
-                      <span class="text-muted mr-1">for</span>
-                      <span class="font-weight-bold mr-2 text-dark-75 font-size-lg">7</span>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon mr-2">
-                        <i class="ki ki-minus icon-xs"></i>
-                      </a>
-                      <a href="#" class="btn btn-xs btn-light-success btn-icon">
-                        <i class="ki ki-plus icon-xs"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <a href="#" class="symbol symbol-70 flex-shrink-0">
-                    <img src="assets/media/stock-600x400/img-4.jpg" title="" alt="" />
-                  </a>
-                </div>
-                <!--end::Item-->
               </div>
               <!--end::Scroll-->
               <!--begin::Summary-->
@@ -252,7 +156,7 @@
                 </div>
                 <div class="text-right">
                   <button type="button" class="btn btn-primary text-weight-bold">
-                    Place Order
+                    Comprar
                   </button>
                 </div>
               </div>
@@ -265,9 +169,7 @@
 
         <!--begin::Dropdown-->
 
-        <div
-          class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg"
-        >
+        <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
           <div class="quick-search quick-search-dropdown" id="kt_quick_search_dropdown">
             <!--begin:Form-->
             <form method="get" class="quick-search-form">
@@ -313,44 +215,25 @@
             </form>
             <!--end::Form-->
             <!--begin::Scroll-->
-            <div
-              class="quick-search-wrapper scroll"
-              data-scroll="true"
-              data-height="325"
-              data-mobile-height="200"
-            ></div>
+            <div class="quick-search-wrapper scroll" data-scroll="true" data-height="325" data-mobile-height="200"></div>
             <!--end::Scroll-->
           </div>
         </div>
         <!--end::Dropdown-->
 
         <!--begin::User-->
-        <b-dropdown
-          id="dropdown-1"
-          no-caret
-          menu-class="p-0 m-0  dropdown-menu-anim-up dropdown-menu-lg p-0"
-          variant="transparent"
-          right
-        >
+        <b-dropdown no-caret toggle-class="p-0" menu-class="p-0 m-0  dropdown-menu-anim-up dropdown-menu-lg p-0" variant="transparent" right>
           <template #button-content>
             <!--begin::Toggle-->
             <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
-              <div
-                class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto"
-              >
-                <span
-                  class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1"
-                >
-                  Hola,
-                </span>
-                <span
-                  class="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4"
-                >
+              <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto">
+                <span class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1"> Hola, </span>
+                <span class="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4">
                   {{ authUser.name }}
                 </span>
                 <span class="symbol symbol-35">
                   <span class="symbol-label text-white font-size-h5 font-weight-bold bg-white-o-30">
-                    S
+                    {{ authUser.firstLetterName }}
                   </span>
                 </span>
               </div>
@@ -365,10 +248,10 @@
             </div>
             <!--end::Symbol-->
             <!--begin::Text-->
-            <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">Sean Stone</div>
-            <span class="label label-light-success label-lg font-weight-bold label-inline"
-              >3 messages</span
-            >
+            <div class="text-dark m-0 flex-grow-1 mr-3 font-size-h5">
+              {{ authUser.name }}
+            </div>
+            <span class="label label-light-success label-lg font-weight-bold label-inline">3 messages</span>
             <!--end::Text-->
           </div>
           <div class="separator separator-solid"></div>
@@ -385,9 +268,7 @@
                   <div class="font-weight-bold">My Profile</div>
                   <div class="text-muted">
                     Account settings and more
-                    <span class="label label-light-danger label-inline font-weight-bold"
-                      >update</span
-                    >
+                    <span class="label label-light-danger label-inline font-weight-bold">update</span>
                   </div>
                 </div>
               </div>
@@ -435,16 +316,8 @@
             <!--begin::Footer-->
             <div class="navi-separator mt-3"></div>
             <div class="navi-footer px-8 py-5">
-              <a target="_blank" class="btn btn-light-primary font-weight-bold" @click="logOut">
-                Sign Out
-              </a>
-              <a
-                href="custom/user/login-v2.html"
-                target="_blank"
-                class="btn btn-clean font-weight-bold"
-              >
-                Upgrade Plan
-              </a>
+              <a target="_blank" class="btn btn-light-primary font-weight-bold" @click="logOut"> Salir </a>
+              <a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean font-weight-bold"> Cambiar Plan </a>
             </div>
             <!--end::Footer-->
           </div>
@@ -468,7 +341,8 @@ export default {
     LayoutMenu
   },
   computed: {
-    ...mapState('auth', ['authUser'])
+    ...mapState('auth', ['authUser']),
+    ...mapState('courses', ['courses'])
   },
   methods: {
     logOut() {
@@ -477,7 +351,7 @@ export default {
         .then(() => {
           window.location.href = '/login';
         })
-        .catch((error) => {
+        .catch(error => {
           console.log(error);
         });
     }

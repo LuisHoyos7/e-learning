@@ -16,7 +16,10 @@
 export default {
   data() {
     return {
-      menu: [{ route: { name: 'Groups' }, label: 'Grupos' }]
+      menu: [
+        { route: { name: 'Groups' }, label: 'Grupos' },
+        { route: { name: 'Courses' }, label: 'Cursos' }
+      ]
     };
   }
 };
