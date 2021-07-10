@@ -11,6 +11,8 @@ class Third extends Model
 
     protected $fillable = [
         'name',
+        'description',
+        'photo',
         'mobile',
         'address',
         'user_id',

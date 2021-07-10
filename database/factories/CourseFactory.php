@@ -26,8 +26,10 @@ class CourseFactory extends Factory
       
         return [
             'name' => $this->faker->name,
+            'date' => $this->faker->date,
             'description' => $this->faker->text,
-            'price' => $this->faker->randomFloat($nbMaxDecimals = NULL, $min = 0, $max = 100000),
+            'photo' => $this->faker->image,
+            'price' => '24999',
             'duration' => $this->faker->time($format = 'H:i:s', $max = 'now'),
             'coupon'  => $this->faker->iso8601($max = 'now'),
             'slug'=>$slug,
