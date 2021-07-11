@@ -11,7 +11,7 @@ use App\Http\Controllers\categoryController;
 use App\Http\Controllers\ModalityController;
 use App\Http\Controllers\ThirdController;
 use App\Http\Controllers\UnitController;
-
+use App\Models\User;
 
 
 /*
