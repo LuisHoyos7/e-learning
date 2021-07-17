@@ -28,11 +28,11 @@ use App\Models\User;
 Auth::routes();
 
 Route::resource('course', CourseController::class);
+Route::middleware('role:Teacher|Admin')->post('course',[CourseController::class,'store']);
 
 Route::middleware(['auth'])->group(function(){
-  Route::resource('group', GroupController::class);
+
   Route::resource('user', UserController::class);
-  Route::resource('category', CategoryController::class);
   Route::resource('modality', ModalityController::class);
   Route::resource('third', ThirdController::class);
   Route::resource('unit', UnitController::class);

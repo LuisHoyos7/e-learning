@@ -19,14 +19,14 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-       $role1 = Role::create(['name'=>'Admin']);
-       $role2 = Role::create(['name'=>'profesor']);
+        Role::create(['name' => 'Admin']);
+        Role::create(['name' => 'Teacher']);
+        Role::create(['name' => 'User']);
+        //RUTA Name                   Role                  Roles
+        //   Permission::create(['name'=>'welcome'])->assignRole($role1);  or ->assignRoles([$role1,$role2])
 
-                                //RUTA Name                   Role                  Roles
-    //   Permission::create(['name'=>'welcome'])->assignRole($role1);  or ->assignRoles([$role1,$role2])
-        
-    
-      
+
+
 
 
     }

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('roles', [RoleController::class,'index'])->name('admin.roles');
 Route::post('roles', [RoleController::class,'store'])->name('admin.roles');
 //
+Route::resource('group', GroupController::class);
+Route::resource('category', CategoryController::class);
 
 Route::get('permissions', [PermissionController::class,'index'])->name('admin.permissions');
 Route::post('permissions', [PermissionController::class,'store'])->name('admin.create.permissions');
