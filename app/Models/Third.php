@@ -19,6 +19,7 @@ class Third extends Model
         'profession',
         'identification',
     ];
+
     public function user() {
         return $this->belongsTo(User::class);
     }

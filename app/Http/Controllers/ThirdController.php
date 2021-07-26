@@ -54,7 +54,6 @@ class ThirdController extends Controller
         return $third;
     }
 
-   
     /**
      * Update the specified resource in storage.
      *

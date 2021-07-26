@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $user = Auth::user();
+        $user = Auth::user()->load('third');
         return $user;
     }
 
