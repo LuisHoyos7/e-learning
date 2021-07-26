@@ -10,6 +10,10 @@ import CourseDetail from '../pages/Courses/Detail';
 import CourseForm from '../pages/Courses/Form';
 import CourseList from '../pages/Courses/List';
 
+import Profile from '../pages/Profile';
+import ProfilePersonalInfo from '../pages/Profile/PersonalInfo';
+import ProfileAccountInfo from '../pages/Profile/AccountInfo';
+
 export default [
   {
     path: '/',
@@ -22,12 +26,13 @@ export default [
   {
     path: '/grupos',
     component: Groups,
-    meta: { breadcrumb: 'Grupos' },
+
     children: [
       {
         path: '',
         name: 'Groups',
-        component: GroupList
+        component: GroupList,
+        meta: { breadcrumb: 'Grupos' }
       },
       {
         path: 'crear',
@@ -57,12 +62,12 @@ export default [
   {
     path: '/cursos',
     component: Courses,
-    meta: { breadcrumb: 'Cursos' },
     children: [
       {
         path: '',
         name: 'Courses',
-        component: CourseList
+        component: CourseList,
+        meta: { breadcrumb: 'Cursos' }
       },
       {
         path: 'crear',
@@ -84,6 +89,28 @@ export default [
         component: CourseForm,
         meta: { breadcrumb: 'Editar' },
         props: true
+      }
+    ]
+  },
+
+  // Profile
+  {
+    path: '/perfil',
+    name: 'Profile',
+    component: Profile,
+    meta: { breadcrumb: 'Perfil' },
+    children: [
+      {
+        path: 'informacion-personal',
+        name: 'ProfilePersonalInfo',
+        component: ProfilePersonalInfo,
+        meta: { breadcrumb: 'Información Personal' }
+      },
+      {
+        path: 'informacion-cuenta',
+        name: 'ProfileAccountInfo',
+        component: ProfileAccountInfo,
+        meta: { breadcrumb: 'Información de la Cuenta' }
       }
     ]
   }

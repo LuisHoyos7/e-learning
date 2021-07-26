@@ -48,11 +48,13 @@ class User extends Authenticatable
     ];
     protected $appends = ['all_permissions'];
 
-    
-
     public function getAllPermissionsAttribute()
     {
         return $this->getAllPermissions();
     }
-    
+
+    public function third()
+    {
+        return $this->hasOne(Third::class);
+    }
 }
