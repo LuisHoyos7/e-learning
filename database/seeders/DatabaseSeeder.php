@@ -3,7 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\Group::factory(10)->create();
+        \App\Models\Category::factory(10)->create();
+        \App\Models\Modality::factory(10)->create();
+        \App\Models\User::factory(10)->create();
+        \App\Models\Course::factory(10)->create();
+        \App\Models\WhisList::factory(10)->create();
+        \App\Models\Unit::factory(10)->create();
+        \App\Models\Topic::factory(10)->create();
+        //Seeder Rolee
+        $this->call(RoleSeeder::class);
     }
 }
